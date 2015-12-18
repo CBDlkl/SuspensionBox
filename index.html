@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<title>CSS3美化DIV模块</title> 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+		$(function(){
+			$(".photoDIV").mouseover(function(){
+				$("#photoDIV_U").removeClass("photoDIV_U");
+				$("#photoDIV_U").addClass("photoDIV_F");
+			})
+			$(".photoDIV").mouseout(function(){
+				$("#photoDIV_U").removeClass("photoDIV_F");
+				$("#photoDIV_U").addClass("photoDIV_U");
+			})
+		})
+	</script>
+<style>
+.photoDIV
+	{
+		margin-top:40px;
+		padding-top:10px;
+		overflow:hidden;
+	}
+
+	.photoDIV li
+     {
+		  list-style-type : none;
+		  float   : left;
+		  cursor  : pointer;
+		  z-index:1;
+     }
+
+	.photoDIV .photoDIV_span
+	{
+		overflow:hidden;
+		padding-right:12px;
+		padding-top:10px;
+		padding-bottom:10px;
+	}
+
+	.photoDIV .photo_span01
+	{
+		float:left;
+		font-weight:bolder;
+		margin-left:32px;
+	}
+
+	.photoDIV .photo_span02
+	{
+		float:right;
+		margin-right:32px;
+	}
+
+	.photoDIV .photoDIV_img
+	{
+		text-align:center;
+	}
+
+	.photoDIV_F
+	{
+		position:relative;
+		z-index:1;
+		width:380px;
+		height:250px;
+		float:left;
+		color:#134f8d;
+		border-top:#7dd302 4px solid;
+		background-color:#FFFFFF;
+		transition: color 0.5s,margin-top 0.5s,box-shadow 0.5s,border-top 0.5s;
+		-moz-transition:color 0.5s,margin-top 0.5s,box-shadow 0.5s,border-top 0.5s;
+		-webkit-transition: color 0.5s,margin-top 0.5s,box-shadow 0.5s,border-top 0.5s;
+		-o-transition: color 0.5s,margin-top 0.5s,box-shadow 0.5s,border-top 0.5s;
+	}
+
+	.photoDIV_F:hover
+	{
+		position:relative;
+		z-index:2;
+		margin-top:-8px;
+		width:380px;
+		height:250px;
+		float:left;
+		color:#0c9cfd;
+		border-top:#ff9c13 5px solid;
+		background-color:#FFFFFF;
+		-moz-box-shadow: 2px 2px 8px #909090;
+		-webkit-box-shadow: 2px 2px 8px #909090;
+		box-shadow:1px 4px 8px #909090;
+	}
+	.photoDIV_U
+	{
+		position:relative;
+		z-index:2;
+		margin-top:-8px;
+		width:380px;
+		height:250px;
+		float:left;
+		color:#0c9cfd;
+		border-top:#ff9c13 5px solid;
+		background-color:#FFFFFF;
+		-moz-box-shadow: 2px 2px 8px #909090;
+		-webkit-box-shadow: 2px 2px 8px #909090;
+		box-shadow:1px 4px 8px #909090;
+	}
+</style>
+</head> 
+<body> 
+	<div class="photoDIV">
+				<div class="photoDIV_F">
+					<div class="photoDIV_span"><span class="photo_span01">公共配套设施</span><span class="photo_span02">765张图</span></div>
+					<div class="photoDIV_img"><img src="images/photoNO1.png"></img></div>
+				</div>
+				<div id="photoDIV_U" class="photoDIV_U">
+					<div class="photoDIV_span"><span class="photo_span01">工作进展</span><span class="photo_span02">824张图</span></div>
+					<div class="photoDIV_img"><img src="images/photoNO2.png"></img></div>
+				</div>
+				<div class="photoDIV_F">
+					<div class="photoDIV_span"><span class="photo_span01">建设者</span><span class="photo_span02">784张图</span></div>
+					<div class="photoDIV_img"><img src="images/photoNO3.png"></img></div>
+				</div>
+        </div>
+</body> 
+</html>
